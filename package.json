@@ -1,0 +1,29 @@
+{
+  "name": "linear-gradient",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha src/test/*.test.js",
+    "coverage":
+      "istanbul cover node_modules/mocha/bin/_mocha src/test/*.test.js",
+    "build-browserify": "browserify src/index.js -o dist/js/linear-gradient.js",
+    "build-babel":
+      "babel --presets env dist/js/linear-gradient.js --out-file dist/js/linear-gradient.js",
+    "build-minify":
+      "minify dist/js/linear-gradient.js --output dist/js/linear-gradient.min.js",
+    "build":
+      "npm run build-browserify && npm run build-babel && npm run build-minify"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browserify": "^15.0.0",
+    "istanbul": "^0.4.5",
+    "minifier": "^0.8.1"
+  }
+}

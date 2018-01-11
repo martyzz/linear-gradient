@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for linear-gradient\linearGradient.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">linear-gradient/</a> linearGradient.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>98/98</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.96% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>48/49</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>93/93</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">54×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">78×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const OUTPUT_MODE_HEX = 0;
+const OUTPUT_MODE_RGB = 1;
+&nbsp;
+/**
+ *
+ * @param color any value
+ *
+ * @return true if color has HEX format, orherwise false
+ */
+const isColorHEXFormat = color =&gt; {
+  return typeof color === "string" &amp;&amp; /^#([A-Fa-f0-9]{6})$/.test(color);
+};
+&nbsp;
+/**
+ *
+ * @param color any value
+ *
+ * @return true if color has RGB format, orherwise false
+ */
+const isColorRGBFormat = color =&gt; {
+  return (
+    Array.isArray(color) &amp;&amp;
+    color.length === 3 &amp;&amp;
+    color.filter(value =&gt; !Number.isInteger(value) || value &lt; 0 || value &gt; 255)
+      .length === 0
+  );
+};
+&nbsp;
+/**
+ *
+ * @param colors ["#ffffff", "#000000", ...]
+ *            or [[255, 255, 255], [0, 0, 0], ...]
+ *            or ["#ffffff", [0, 0, 0], ...]
+ *
+ * @returns true or thorws an error
+ *
+ * Checks if input colors array is valid.
+ */
+const areInputColorsValid = colors =&gt; {
+  if (!Array.isArray(colors)) throw new Error("Colors must be an array.");
+  colors.forEach(color =&gt; {
+    const isString = typeof color === "string";
+    const isArray = Array.isArray(color);
+&nbsp;
+    if (!isString &amp;&amp; !isArray)
+      throw new Error("Color must be a string or an array.");
+&nbsp;
+    if (isString &amp;&amp; !isColorHEXFormat(color)) {
+      throw new Error("Wrong string color format.");
+    }
+&nbsp;
+    if (isArray &amp;&amp; !isColorRGBFormat(color)) {
+      throw new Error("Wrong array color format.");
+    }
+  });
+&nbsp;
+  return true;
+};
+&nbsp;
+/**
+ *
+ * @param steps integer &gt;= colorsLength
+ * @param colorsLength length of input colors
+ *
+ * @returns true or throws an error
+ *
+ * Checks if input steps is valid.
+ */
+const isInputStepsValid = (steps, colorsLength) =&gt; {
+  if (!Number.isInteger(steps)) {
+    throw new Error("Wrong steps value, must be an integer.");
+  }
+&nbsp;
+  if (steps &lt; colorsLength) {
+    throw new Error("Wrong steps value, must be &gt;= length of colors.");
+  }
+&nbsp;
+  return true;
+};
+&nbsp;
+/**
+ *
+ * @param outputMode 0 or 1
+ *
+ * @returns true or throws an error
+ *
+ * Checks if output mode is valid.
+ */
+const isOutputModeValid = outputMode =&gt; {
+  if (outputMode !== OUTPUT_MODE_HEX &amp;&amp; outputMode !== OUTPUT_MODE_RGB) {
+    throw new Error(
+      "Output mode must be either OUTPUT_MODE_HEX or OUTPUT_MODE_RGB."
+    );
+  }
+&nbsp;
+  return true;
+};
+&nbsp;
+/**
+ *
+ * @param hexColor color in HEX format #ffffff or #000000 or ...
+ *
+ * @returns color in RGB format [255, 255, 255] or [0, 0, 0] or ...
+ */
+const convertColorHEXToRGB = hexColor =&gt; {
+  const hexArray = [
+    hexColor.substring(1, 3),
+    hexColor.substring(3, 5),
+    hexColor.substring(5, 7)
+  ];
+&nbsp;
+  return hexArray.map(value =&gt; parseInt(value, 16));
+};
+&nbsp;
+/**
+ *
+ * @param rgbColor color in RGB format [255, 255, 255] or [0, 0, 0] or ...
+ *
+ * @returns color in HEX format #ffffff or #000000 or ...
+ */
+const convertColorRGBToHEX = rgbColor =&gt; {
+  const hexColor = rgbColor
+    .map(value =&gt; value.toString(16))
+    .map(value =&gt; (value.length === 1 ? "0" + value : value));
+&nbsp;
+    return "#" + hexColor.join("");
+};
+&nbsp;
+/**
+ *
+ * @param colors ["#ffffff", "#000000", ...]
+ *            or [[255, 255, 255], [0, 0, 0], ...]
+ *            or ["#ffffff", [0, 0, 0], ...]
+ *
+ * @returns colors in RGB format only [[255, 255, 255], [0, 0, 0], ...]
+ */
+const convertColorsMixedToRGB = colors =&gt; {
+  return colors.map(
+    color =&gt; (isColorHEXFormat(color) ? convertColorHEXToRGB(color) : color)
+  );
+};
+&nbsp;
+/**
+ *
+ * @param colors ["#ffffff", "#000000", ...]
+ *            or [[255, 255, 255], [0, 0, 0], ...]
+ *            or ["#ffffff", [0, 0, 0], ...]
+ *
+ * @returns colors in HEX format only ["#ffffff", "#000000", "#ff00ff"]
+ */
+const convertColorsMixedToHEX = colors =&gt; {
+  return colors.map(
+    color =&gt; (isColorRGBFormat(color) ? convertColorRGBToHEX(color) : color)
+  );
+};
+&nbsp;
+/**
+ *
+ * @param colors array of items to be grupped in pairs
+ *               [[0, 0, 0], [255, 255, 255], [147, 147, 147], ...]
+ *
+ * @returns array of arrays of paired elements
+ *          [
+ *            [[0, 0, 0], [255, 255, 255]],
+ *            [[255, 255, 255], [147, 147, 147]],
+ *          ]
+ *
+ * Creates groups of colors, it creates something like breakpoints.
+ */
+const createColorGroups = colors =&gt; {
+  const groups = [];
+&nbsp;
+  colors.forEach((currentColor, index) =&gt; {
+    let nextColor = colors[index + 1];
+&nbsp;
+    if (nextColor) {
+      groups.push([currentColor, nextColor]);
+    }
+  });
+&nbsp;
+  return groups;
+};
+&nbsp;
+/**
+ *
+ * @param stepsCount number of steps
+ * @param groupsCount number of groups
+ *
+ * @return array map of how many steps will certain group have
+ */
+const createStepsMap = (stepsCount, groupsCount) =&gt; {
+  const map = [];
+  let index = 0;
+&nbsp;
+  for (let i = 0; i &lt; groupsCount; i++) map.push(0);
+&nbsp;
+  while (stepsCount &gt; 0) {
+    stepsCount--;
+    map[index++]++;
+    index = index &gt;= groupsCount ? 0 : index;
+  }
+&nbsp;
+  return map;
+};
+&nbsp;
+/**
+ *
+ * @param stepsCount
+ *
+ * @return array with values from 0 to 1 gradualy increasing
+ *         steps are determined of stepsCount
+ */
+const createRatioSteps = stepsCount =&gt; {
+  stepsCount++;
+  const step = 1 / stepsCount;
+  const steps = [];
+  for (let i = 1; i &lt; stepsCount; i++) steps.push(i * step);
+  return steps;
+};
+&nbsp;
+/**
+ *
+ * @param value
+ * @param valueFrom
+ * @param valueTo
+ * @param resultFrom
+ * @param resultTo
+ *
+ * Self explaining...
+ *
+ * @return mapped number
+ */
+const numberMap = (value, valueFrom, valueTo, resultFrom, resultTo) =&gt; {
+  return (
+    resultFrom +
+    (resultTo - resultFrom) * (value - valueFrom) / (valueTo - valueFrom)
+  );
+};
+&nbsp;
+/**
+ *
+ * @param from color [255, 0, 0] we are interpolating from
+ * @param to color [0, 0, 255] we are interpolating from
+ * @param stepsCount number of steps needed in interpolating
+ *
+ * @return array of RGB interpolating colors with length of stepsCount
+ *         colors are also rounded to decimals
+ */
+const interpolate = (from, to, stepsCount) =&gt; {
+  const ratioSteps = createRatioSteps(stepsCount);
+  return ratioSteps.map(ratio =&gt; {
+    return [
+      numberMap(ratio, 0, 1, from[0], to[0]),
+      numberMap(ratio, 0, 1, from[1], to[1]),
+      numberMap(ratio, 0, 1, from[2], to[2])
+    ].map(number =&gt; Math.round(number));
+  });
+};
+&nbsp;
+/**
+ * @param colors ["#ffffff", "#000000", ...]
+ *            or [[255, 255, 255], [0, 0, 0], ...]
+ *            or ["#ffffff", [0, 0, 0], ...]
+ * @param steps number of gradient steps
+ *              must be equal or bigger than length of colors
+ * @param outputMode OUTPUT_MODE_HEX resulting array will be in HEX
+ *                or OUTPUT_MODE_RGB resulting array will be in RGB
+ *
+ * @returns ["#ffffff", "#000000", ...]
+ *       or [[255, 255, 255], [0, 0, 0], ...]
+ *          (return format is based on output mode)
+ *
+ * Takes in array of colors, number of steps and output mode and creates
+ * an array of colors in resulting linear gradient.
+ */
+const generate = (colors, steps, outputMode) =&gt; {
+  let gradient = [];
+&nbsp;
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (
+    areInputColorsValid(colors) &amp;&amp;
+    isInputStepsValid(steps, colors.length) &amp;&amp;
+    isOutputModeValid(outputMode)
+  ) {
+    const rgbColors = convertColorsMixedToRGB(colors);
+    const colorGroups = createColorGroups(rgbColors);
+    const stepsMap = createStepsMap(
+      steps - rgbColors.length,
+      colorGroups.length
+    );
+&nbsp;
+    colorGroups.forEach((group, index) =&gt; {
+      const groupSteps = stepsMap[index];
+      const groupBegin = group[0];
+      const groupEnd = group[1];
+      const interpolation = interpolate(groupBegin, groupEnd, groupSteps);
+&nbsp;
+      gradient.push(groupBegin);
+      gradient = gradient.concat(interpolation);
+      if (index === colorGroups.length - 1) gradient.push(groupEnd);
+    });
+  }
+&nbsp;
+  switch (outputMode) {
+    case OUTPUT_MODE_HEX:
+      gradient = convertColorsMixedToHEX(gradient);
+      break;
+    case OUTPUT_MODE_RGB:
+      gradient = convertColorsMixedToRGB(gradient);
+      break;
+  }
+&nbsp;
+  return gradient;
+};
+&nbsp;
+module.exports = {
+  OUTPUT_MODE_HEX,
+  OUTPUT_MODE_RGB,
+  areInputColorsValid,
+  isInputStepsValid,
+  isOutputModeValid,
+  convertColorHEXToRGB,
+  convertColorRGBToHEX,
+  convertColorsMixedToRGB,
+  convertColorsMixedToHEX,
+  createColorGroups,
+  createStepsMap,
+  createRatioSteps,
+  numberMap,
+  interpolate,
+  generate
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 10 2018 20:14:01 GMT+0100 (Střední Evropa (běžný čas))
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

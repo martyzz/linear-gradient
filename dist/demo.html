@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>linear-gradient.js - a tool for creating linear gradients programatically</title>
+  <style>
+    body {
+      font-family: monospace;
+    }
+
+    input,
+    button {
+      font-family: monospace;
+    }
+
+    input[type="color"] {
+      width: 100px;
+    }
+
+    input[type="number"] {
+      width: 250px;
+    }
+
+    .colors .color {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    .results .result div {
+      width: 50%;
+      height: 25px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .results .result span {
+      height: 25px;
+      line-height: 25px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 15px;
+      font-family: monospace;
+    }
+
+    .processing-ms {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>linear-gradient.js - a tool for creating linear gradients programatically</h1>
+  <hr>
+  <div class="colors"></div>
+  <br>
+  <button class="add-color">add color</button>
+  <hr>
+  <p>
+    execution of linearGradient.generate(...) took
+    <span class="processing-ms">0.00</span> ms
+  </p>
+  <button class="generate">generate</button>
+  <input type="number" class="steps-count" placeholder="steps count (default 100)">
+  <hr>
+  <h3>results: </h3>
+  <div class="results"></div>
+  <script src="js/linear-gradient.min.js"></script>
+  <script>
+    var colorsNode = document.querySelector(".colors");
+    var addColorNode = document.querySelector(".add-color");
+    var generateNode = document.querySelector(".generate");
+    var stepsCountNode = document.querySelector(".steps-count");
+    var resultsNode = document.querySelector(".results");
+    var processingMsNode = document.querySelector(".processing-ms");
+
+    // add/remove colors
+    var addRemoveColor = function (event, defaultColor) {
+      var newColorNode = document.createElement("div");
+      newColorNode.setAttribute("class", "color");
+      newColorNode.innerHTML = '<input type="color"><button>x</button>';
+
+      colorsNode.appendChild(newColorNode);
+
+      newColorNode.querySelector("button").addEventListener("click", function () {
+        newColorNode.remove();
+      });
+
+      if (defaultColor) {
+        var colorInputNode = newColorNode.querySelector('input[type="color"]');
+        colorInputNode.setAttribute("value", defaultColor);
+      }
+    };
+
+    // generate
+    var generate = function () {
+      var colorInputNodes = colorsNode.querySelectorAll('.color input[type="color"]');
+      var colorValues = Array.prototype.slice.call(colorInputNodes).map(function (inputNode) {
+        return inputNode.value;
+      });
+      var stepsValue = parseInt(stepsCountNode.value) || 100;
+
+      var begin = performance.now();
+      var gradientColors = linearGradient.generate(
+        colorValues,
+        stepsValue,
+        linearGradient.OUTPUT_MODE_HEX
+      );
+      var end = performance.now();
+      processingMsNode.innerHTML = (end - begin).toFixed(2);
+
+      resultsNode.innerHTML = "";
+      gradientColors.forEach(function (gradientColor) {
+        resultsNode.innerHTML += '<div class="result"><div style="background-color: ' + gradientColor +
+          '"></div><span>' + gradientColor + '</span></div>'
+      });
+    };
+
+    addColorNode.addEventListener("click", addRemoveColor);
+    addRemoveColor(null, "#00ffff");
+    addRemoveColor(null, "#ff00ff");
+    addRemoveColor(null, "#ffff00");
+    addRemoveColor(null, "#ff0000");
+    addRemoveColor(null, "#00ff00");
+    addRemoveColor(null, "#0000ff");
+
+    generateNode.addEventListener("click", generate);
+    generate();
+  </script>
+</body>
+
+</html>
